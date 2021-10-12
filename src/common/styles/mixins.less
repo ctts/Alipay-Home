@@ -1,0 +1,24 @@
+.arrow(@direction: 'up', @size: 18px, @color: #999) {
+  width: @size;
+  height: @size;
+  border: @color solid;
+  border-width: 0 0 1px 1px;
+  display: inline-block;
+  .transform(@direction);
+
+  .transform (@direction) when (@direction ='up') {
+    transform: rotate(135deg);
+  }
+
+  .transform (@direction) when (@direction ='down') {
+    transform: rotate(315deg);
+  }
+
+  .transform (@direction) when (@direction ='left') {
+    transform: rotate(45deg);
+  }
+
+  .transform (@direction) when (@direction ='right') {
+    transform: rotate(225deg);
+  }
+}
