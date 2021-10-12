@@ -1,0 +1,84 @@
+@import '~@/common/styles/mixins.less';
+
+.money {
+  width: 511px;
+  height: 336px;
+  background-image: linear-gradient(43deg, #0e1722, #1c3349);
+  border-radius: 10px;
+  padding: 26px 24px;
+  color: #fff;
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    .myMoney {
+      margin-right: 9px;
+    }
+  }
+
+  .moneyTitle {
+    color: hsla(0, 0%, 100%, 0.25);
+    font-size: 12px;
+  }
+
+  .hideItem {
+    color: #fff;
+    font-size: 40px;
+    height: 48px;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  margin: 23px 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightArrow {
+  font-size: 12px;
+
+  &::after {
+    content: '';
+    margin-left: 4px;
+    .arrow('right', 6px);
+  }
+}
+
+.mr6 {
+  margin-right: 6px;
+}
+.mt38 {
+  margin-top: 38px;
+}
+
+:global {
+  .ant-statistic-content-value {
+    color: #fff;
+    font-size: 30px;
+    height: 48px;
+  }
+
+  .ant-btn {
+    background-color: transparent;
+    color: #999;
+    border-color: #999;
+
+    &:hover {
+      background-color: #1677ff;
+      color: #fff;
+    }
+  }
+}
