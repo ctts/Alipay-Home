@@ -4,6 +4,8 @@ import Footer from './components/Foot';
 import Money from './components/Money';
 import DataBoard from './components/DataBoard';
 import Financial from './components/Financial';
+import Solution from './components/Solution';
+import Recommend from './components/Recommend';
 import Usual from './components/Usual';
 
 export default function IndexPage() {
@@ -15,6 +17,8 @@ export default function IndexPage() {
           <div className={styles.leftPanel}>
             <DataBoard />
             <Financial />
+            <Solution />
+            <Recommend />
           </div>
           <div className={styles.rightPanel}>
             <Money />
