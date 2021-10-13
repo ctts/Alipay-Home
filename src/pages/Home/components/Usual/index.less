@@ -7,9 +7,33 @@
   width: 100%;
 }
 
-:global {
-  .ant-list-item {
-    padding: 5px 0;
-    color: #666;
+.carouselItem {
+  width: 350px;
+  height: 172px;
+  position: relative;
+  // background-image: url(https://gw.alipayobjects.com/mdn/rms_fecc3a/afts/img/A*YFcdQarUt4UAAAAAAAAAAAAAARQnAQ);
+  background-size: 100% 100%;
+  border-radius: 10px;
+  padding: 24px;
+
+  .title {
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+
+  .content {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  :global {
+    .ant-list-item {
+      padding: 5px 0;
+      color: #666;
+    }
   }
 }

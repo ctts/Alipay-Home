@@ -1,7 +1,8 @@
 import styles from './index.less';
 import CardHeader from '@/common/components/CardHeader';
 import Card from '@/common/components/Card';
-import { Select, Divider, List } from 'antd';
+import { Select, Divider, List, Carousel, Button } from 'antd';
+import url from '*.svg';
 const { Option } = Select;
 
 export default function IndexPage() {
@@ -49,6 +50,27 @@ export default function IndexPage() {
       time: '07.09',
     },
   ];
+  const carouselData = [
+    {
+      url: 'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*oqM0SZkIPQkAAAAAAAAAAAAAARQnAQ',
+      title: '超级五六七',
+      content: '活动火热招商中',
+      button: '活动火热招商中',
+    },
+    {
+      url: 'https://gw.alipayobjects.com/mdn/rms_fecc3a/afts/img/A*YFcdQarUt4UAAAAAAAAAAAAAARQnAQ',
+      title: '批量付款免费开通中',
+      content: 'excel一键导入3000笔</br>安全校验 秒到账 免手续费',
+      button: '免费开通',
+    },
+    {
+      url: 'https://img.alicdn.com/imgextra/i3/O1CN01CfbjKO1ufooC8Ak3u_!!6000000006065-2-tps-890-340.png',
+      title: '亲，麻烦来填个问卷',
+      content: '说说您的使用感受 </br> 便于支付宝更好地为您服务',
+      button: '立即吐槽',
+    },
+  ];
+
   return (
     <div className={styles.mt20}>
       <Card>
@@ -82,6 +104,27 @@ export default function IndexPage() {
             </List.Item>
           ))}
         </List>
+        <div style={{ width: '350px' }}>
+          <Carousel autoplay>
+            {carouselData.map((data) => (
+              <>
+                <div
+                  style={{
+                    backgroundImage: `url(${data.url})`,
+                  }}
+                  className={styles.carouselItem}
+                >
+                  <p className={styles.title}>{data.title}</p>
+                  <p
+                    className={styles.content}
+                    dangerouslySetInnerHTML={{ __html: data.content }}
+                  ></p>
+                  <Button>{data.button}</Button>
+                </div>
+              </>
+            ))}
+          </Carousel>
+        </div>
       </Card>
     </div>
   );

@@ -1,8 +1,9 @@
 import styles from './index.less';
 import Card from '@/common/components/Card';
 import { useState } from 'react';
+import { isFunction } from '@/common/utils';
 
-export default function financial(props: any) {
+export default function InvertColorsCard(props: any) {
   const [hover, setHover] = useState(false);
   function handleMouseEnter() {
     setHover(true);
@@ -16,8 +17,16 @@ export default function financial(props: any) {
       <h4>{props.title}</h4>
       <div>
         <div className={styles.contentWrapper}>
-          <div className={styles.leftContent}>{props.leftContent}</div>
-          <div>{props.rightOriginContent}</div>
+          <div className={styles.leftContent}>
+            {isFunction(props.leftContent)
+              ? props.leftContent()
+              : props.leftContent}
+          </div>
+          <div>
+            {isFunction(props.rightOriginContent)
+              ? props.rightOriginContent()
+              : props.rightOriginContent}
+          </div>
         </div>
       </div>
     </Card>
@@ -32,8 +41,16 @@ export default function financial(props: any) {
     >
       <h4 className={styles.white}>{props.title}</h4>
       <div className={styles.contentWrapper}>
-        <div className={styles.leftContent}>{props.leftContent}</div>
-        <div>{props.rightCoverContent}</div>
+        <div className={styles.leftContent}>
+          {isFunction(props.leftContent)
+            ? props.leftContent()
+            : props.leftContent}
+        </div>
+        <div>
+          {isFunction(props.rightCoverContent)
+            ? props.rightCoverContent()
+            : props.rightCoverContent}
+        </div>
       </div>
     </Card>
   );

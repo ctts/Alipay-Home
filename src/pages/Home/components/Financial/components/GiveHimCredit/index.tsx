@@ -3,7 +3,7 @@ import styles from './index.less';
 import { Button } from 'antd';
 
 export default function FinancialCard() {
-  const leftContent = (
+  const leftContent = () => (
     <div className={styles.leftContent}>
       <div>最高可借贷</div>
       <div className={styles.number}>150万</div>
@@ -13,7 +13,7 @@ export default function FinancialCard() {
     </div>
   );
 
-  const rightOriginContent = (
+  const rightOriginContent = () => (
     <ul>
       <li className={styles.iconWrapper}>
         <img
@@ -34,7 +34,7 @@ export default function FinancialCard() {
     </ul>
   );
 
-  const rightCoverContent = (
+  const rightCoverContent = () => (
     <ul className={styles.verticalBar}>
       <li>· 资金周转不再难，千万用户正在用</li>
       <li>· 极速放款，按日计息</li>

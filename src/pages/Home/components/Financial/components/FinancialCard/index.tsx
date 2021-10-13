@@ -3,7 +3,7 @@ import styles from './index.less';
 import { Button } from 'antd';
 
 export default function FinancialCard() {
-  const leftContent = (
+  const leftContent = () => (
     <div className={styles.leftContent}>
       <div>月年化收益率参考</div>
       <div className={styles.number}>2.2440</div>
@@ -13,7 +13,7 @@ export default function FinancialCard() {
     </div>
   );
 
-  const rightOriginContent = (
+  const rightOriginContent = () => (
     <ul>
       <li className={styles.iconWrapper}>
         <img
@@ -34,7 +34,7 @@ export default function FinancialCard() {
     </ul>
   );
 
-  const rightCoverContent = (
+  const rightCoverContent = () => (
     <ul className={styles.verticalBar}>
       <li>· 网商银行代销，资金更安全</li>
       <li>· 无限额，大额实时转入转出</li>
