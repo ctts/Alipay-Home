@@ -1,13 +1,11 @@
 import styles from './index.less';
 
-export default function RecommendItem() {
+export default function RecommendItem(props: any) {
   return (
-    <div>
-      <img
-        src="https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*zafYSrNyju4AAAAAAAAAAAAAARQnAQ"
-        alt="花呗分期"
-      ></img>
-      <h5>先消费，后按月分期还款的服务，有效减轻资金压力</h5>
+    <div className={styles.container}>
+      <img className={styles.iconLogo} src={props.url}></img>
+      <h4>{props.title}</h4>
+      <h5>{props.content}</h5>
     </div>
   );
 }
