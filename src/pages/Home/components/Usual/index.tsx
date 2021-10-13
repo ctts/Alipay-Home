@@ -51,42 +51,38 @@ export default function IndexPage() {
   ];
   return (
     <div className={styles.mt20}>
-      <Card
-        content={
-          <>
-            <CardHeader left="常用功能" right="管理" />
-            <Select className={styles.select} placeholder="请输入功能名称查找">
-              <Option value="jack">Jack</Option>
-              <Option value="lucy">Lucy</Option>
-              <Option value="disabled" disabled>
-                Disabled
-              </Option>
-              <Option value="Yiminghe">yiminghe</Option>
-            </Select>
-            <Divider dashed />
-            <CardHeader left="平台公告" right="更多公告" />
-            <List split={false}>
-              {todo.map((val, index) => (
-                <List.Item key={index}>
-                  <div>{val.content}</div>
-                  <div>{val.time}</div>
-                </List.Item>
-              ))}
-            </List>
-            <div className={styles.mt20}>
-              <CardHeader left="待办通知" right="更多待办" />
-            </div>
-            <List split={false}>
-              {announcement.map((val, index) => (
-                <List.Item key={index}>
-                  <div>{val.content}</div>
-                  <div>{val.time}</div>
-                </List.Item>
-              ))}
-            </List>
-          </>
-        }
-      ></Card>
+      <Card>
+        <CardHeader left="常用功能" right="管理" />
+        <Select className={styles.select} placeholder="请输入功能名称查找">
+          <Option value="jack">Jack</Option>
+          <Option value="lucy">Lucy</Option>
+          <Option value="disabled" disabled>
+            Disabled
+          </Option>
+          <Option value="Yiminghe">yiminghe</Option>
+        </Select>
+        <Divider dashed />
+        <CardHeader left="平台公告" right="更多公告" />
+        <List split={false}>
+          {todo.map((val, index) => (
+            <List.Item key={index}>
+              <div>{val.content}</div>
+              <div>{val.time}</div>
+            </List.Item>
+          ))}
+        </List>
+        <div className={styles.mt20}>
+          <CardHeader left="待办通知" right="更多待办" />
+        </div>
+        <List split={false}>
+          {announcement.map((val, index) => (
+            <List.Item key={index}>
+              <div>{val.content}</div>
+              <div>{val.time}</div>
+            </List.Item>
+          ))}
+        </List>
+      </Card>
     </div>
   );
 }

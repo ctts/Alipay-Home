@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Foot';
 import Money from './components/Money';
 import DataBoard from './components/DataBoard';
+import Financial from './components/Financial';
 import Usual from './components/Usual';
 
 export default function IndexPage() {
@@ -11,8 +12,9 @@ export default function IndexPage() {
       <div>
         <Navbar />
         <div className={styles.main}>
-          <div>
+          <div className={styles.leftPanel}>
             <DataBoard />
+            <Financial />
           </div>
           <div className={styles.rightPanel}>
             <Money />
