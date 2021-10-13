@@ -7,6 +7,7 @@
   border-radius: 10px;
   padding: 26px 24px;
   color: #fff;
+  box-shadow: 0 2px 15px 0 rgb(0, 0, 0, 37%);
 
   .title {
     display: flex;
@@ -34,6 +35,18 @@
       color: #fff;
       font-size: 30px;
       height: 48px;
+    }
+  }
+
+  :global {
+    .ant-btn {
+      background-color: transparent;
+      color: #999;
+
+      &:hover {
+        background-color: #1677ff;
+        color: #fff;
+      }
     }
   }
 }
@@ -71,16 +84,4 @@
 
 .mt38 {
   margin-top: 38px;
-}
-
-:global {
-  .ant-btn {
-    background-color: transparent;
-    color: #999;
-
-    &:hover {
-      background-color: #1677ff;
-      color: #fff;
-    }
-  }
 }

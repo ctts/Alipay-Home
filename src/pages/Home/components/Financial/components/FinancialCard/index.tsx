@@ -3,7 +3,14 @@ import styles from './index.less';
 import { Button } from 'antd';
 
 export default function FinancialCard() {
-  const leftContent = () => (
+  const leftOriginContent = () => (
+    <div className={styles.leftContent}>
+      <div>月年化收益率参考</div>
+      <div className={styles.number}>2.2440</div>
+      <Button className={styles.mt10}>免费转入</Button>
+    </div>
+  );
+  const leftCoverContent = () => (
     <div className={styles.leftContent}>
       <div>月年化收益率参考</div>
       <div className={styles.number}>2.2440</div>
@@ -47,7 +54,8 @@ export default function FinancialCard() {
     <InvertColorsCard
       title="余利宝"
       style={{ width: '450px', height: '200px' }}
-      leftContent={leftContent}
+      leftOriginContent={leftOriginContent}
+      leftCoverContent={leftCoverContent}
       rightOriginContent={rightOriginContent}
       rightCoverContent={rightCoverContent}
     ></InvertColorsCard>

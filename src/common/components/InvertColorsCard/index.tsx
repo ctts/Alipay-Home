@@ -18,9 +18,9 @@ export default function InvertColorsCard(props: any) {
       <div>
         <div className={styles.contentWrapper}>
           <div className={styles.leftContent}>
-            {isFunction(props.leftContent)
-              ? props.leftContent()
-              : props.leftContent}
+            {isFunction(props.leftOriginContent)
+              ? props.leftOriginContent()
+              : props.leftOriginContent}
           </div>
           <div>
             {isFunction(props.rightOriginContent)
@@ -42,9 +42,9 @@ export default function InvertColorsCard(props: any) {
       <h4 className={styles.white}>{props.title}</h4>
       <div className={styles.contentWrapper}>
         <div className={styles.leftContent}>
-          {isFunction(props.leftContent)
-            ? props.leftContent()
-            : props.leftContent}
+          {isFunction(props.leftCoverContent)
+            ? props.leftCoverContent()
+            : props.leftCoverContent}
         </div>
         <div>
           {isFunction(props.rightCoverContent)

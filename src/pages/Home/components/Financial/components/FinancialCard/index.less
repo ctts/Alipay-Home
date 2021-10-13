@@ -1,10 +1,24 @@
 .verticalBar {
   border-left: 0.5px solid #fff;
-  padding-left: 30px;
+  padding-left: 20px;
+  font-size: 13px;
 }
 
 .leftContent {
-  width: 160px;
+  width: 170px;
+
+  :global {
+    .ant-btn {
+      background-color: transparent;
+      color: #1677ff;
+      border-color: #1677ff;
+    }
+
+    .ant-btn-primary {
+      background-color: #1677ff;
+      color: #fff;
+    }
+  }
 }
 
 .mt10 {
