@@ -85,7 +85,7 @@ export default function IndexPage() {
         </Select>
         <Divider dashed />
         <CardHeader left="平台公告" right="更多公告" />
-        <List split={false}>
+        <List className={styles.usualList} split={false}>
           {todo.map((val, index) => (
             <List.Item key={index}>
               <div>{val.content}</div>
@@ -96,7 +96,7 @@ export default function IndexPage() {
         <div className={styles.mt20}>
           <CardHeader left="待办通知" right="更多待办" />
         </div>
-        <List split={false}>
+        <List className={styles.usualList} split={false}>
           {announcement.map((val, index) => (
             <List.Item key={index}>
               <div>{val.content}</div>
@@ -104,7 +104,7 @@ export default function IndexPage() {
             </List.Item>
           ))}
         </List>
-        <div style={{ width: '350px' }}>
+        <div className={styles.carouselWrapper}>
           <Carousel autoplay>
             {carouselData.map((data) => (
               <>
@@ -119,7 +119,7 @@ export default function IndexPage() {
                     className={styles.content}
                     dangerouslySetInnerHTML={{ __html: data.content }}
                   ></p>
-                  <Button>{data.button}</Button>
+                  <Button shape="round">{data.button}</Button>
                 </div>
               </>
             ))}
