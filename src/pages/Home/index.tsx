@@ -3,9 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Foot';
 import Money from './components/Money';
 import DataBoard from './components/DataBoard';
-import { Layout } from 'antd';
-
-const { Sider, Content } = Layout;
+import Usual from './components/Usual';
 
 export default function IndexPage() {
   return (
@@ -18,6 +16,7 @@ export default function IndexPage() {
           </div>
           <div className={styles.rightPanel}>
             <Money />
+            <Usual />
           </div>
         </div>
         <Footer />

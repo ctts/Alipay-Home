@@ -1,5 +1,5 @@
 import styles from './index.less';
-import { Row, Col, Statistic, Popover, Button } from 'antd';
+import { Row, Col, Statistic, Popover, Button, Carousel } from 'antd';
 import { useState } from 'react';
 import {
   EyeOutlined,

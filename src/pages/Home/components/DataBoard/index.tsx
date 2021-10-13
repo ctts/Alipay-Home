@@ -1,5 +1,5 @@
 import style from './index.less';
-import ECharts from '@/pages/components/ECharts';
+import ECharts from '@/common/components/ECharts';
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 export default function Navbar() {

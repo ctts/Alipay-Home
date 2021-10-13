@@ -1,0 +1,23 @@
+@import '~@/common/styles/mixins.less';
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    color: #333;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+  }
+
+  .rightArrow {
+    font-size: 12px;
+
+    &::after {
+      content: '';
+      margin-left: 4px;
+      .arrow('right', 6px);
+    }
+  }
+}
