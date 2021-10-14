@@ -2,6 +2,7 @@ import styles from './index.less';
 import Card from '@/common/components/Card';
 import { useState } from 'react';
 import { isFunction } from '@/common/utils';
+import classNames from 'classnames';
 
 export default function InvertColorsCard(props: any) {
   const {
@@ -9,6 +10,7 @@ export default function InvertColorsCard(props: any) {
     leftCoverContent,
     rightOriginContent,
     rightCoverContent,
+    className,
     ...restProps
   } = props;
   const [hover, setHover] = useState(false);
@@ -44,7 +46,10 @@ export default function InvertColorsCard(props: any) {
       className={styles.shadowCard}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ opacity: hover ? 1 : 0 }}
+      style={{
+        opacity: hover ? 1 : 0,
+        background: props.background || undefined,
+      }}
     >
       <h4 className={styles.white}>{props.title}</h4>
       <div className={styles.contentWrapper}>
@@ -61,7 +66,7 @@ export default function InvertColorsCard(props: any) {
   );
 
   return (
-    <div {...restProps} className={styles.container}>
+    <div {...restProps} className={classNames(styles.container, className)}>
       {card}
       {shadowCard}
     </div>

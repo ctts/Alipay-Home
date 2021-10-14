@@ -1,4 +1,7 @@
-.mt20 {
+@import '~@/common/styles/mixins.less';
+
+.usualContainer {
+  background-color: #fff;
   margin-top: 20px;
 }
 
@@ -13,6 +16,11 @@
       padding: 4px 0;
       color: #666;
     }
+  }
+
+  .usualItem {
+    width: 300px;
+    .overflowOneLine();
   }
 }
 

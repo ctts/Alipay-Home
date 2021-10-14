@@ -72,7 +72,7 @@ export default function Usual() {
   ];
 
   return (
-    <div className={styles.mt20}>
+    <div className={styles.usualContainer}>
       <Card>
         <CardHeader left="常用功能" right="管理" />
         <Select className={styles.select} placeholder="请输入功能名称查找">
@@ -88,7 +88,7 @@ export default function Usual() {
         <List className={styles.usualList} split={false}>
           {todo.map((val, index) => (
             <List.Item key={index}>
-              <div>{val.content}</div>
+              <div className={styles.usualItem}>{val.content}</div>
               <div>{val.time}</div>
             </List.Item>
           ))}
@@ -99,7 +99,7 @@ export default function Usual() {
         <List className={styles.usualList} split={false}>
           {announcement.map((val, index) => (
             <List.Item key={index}>
-              <div>{val.content}</div>
+              <div className={styles.usualItem}>{val.content}</div>
               <div>{val.time}</div>
             </List.Item>
           ))}

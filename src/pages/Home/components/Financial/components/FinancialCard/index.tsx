@@ -1,4 +1,4 @@
-import InvertColorsCard from '@/common/components/InvertColorsCard';
+import InvertColorsCard from '@/pages/Home/components/Financial/components/InvertColorsCard';
 import styles from './index.less';
 import { Button } from 'antd';
 
@@ -53,7 +53,7 @@ export default function FinancialCard() {
   const card = (
     <InvertColorsCard
       title="余利宝"
-      style={{ width: '450px', height: '200px' }}
+      className={styles.bg}
       leftOriginContent={leftOriginContent}
       leftCoverContent={leftCoverContent}
       rightOriginContent={rightOriginContent}
