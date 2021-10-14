@@ -23,7 +23,7 @@ export default function InvertColorsCard(props: any) {
 
   const card = (
     <Card onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <h4>{props.title}</h4>
+      <h4 className={styles.title}>{props.title}</h4>
       <div>
         <div className={styles.contentWrapper}>
           <div className={styles.leftContent}>
@@ -51,7 +51,7 @@ export default function InvertColorsCard(props: any) {
         background: props.background || undefined,
       }}
     >
-      <h4 className={styles.white}>{props.title}</h4>
+      <h4 className={classNames(styles.white, styles.title)}>{props.title}</h4>
       <div className={styles.contentWrapper}>
         <div className={styles.leftContent}>
           {isFunction(leftCoverContent) ? leftCoverContent() : leftCoverContent}
