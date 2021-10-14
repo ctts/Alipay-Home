@@ -6,24 +6,28 @@ import { Divider } from 'antd';
 export default function dataBoard() {
   return (
     <div className={styles.dataBoard}>
-      <Switch />
+      <div className={styles.boardHeader}>
+        <Switch />
+        更多交易
+      </div>
       <div className={styles.content}>
         <div className={styles.leftPanel}>
-          <div className={styles.chinchTitle}>成交金额（元）</div>
-          <div className={styles.clinchDeal}>0.00</div>
-          <Divider />
+          <div className={styles.clinchWrapper}>
+            <div className={styles.clinchTitle}>成交金额（元）</div>
+            <div className={styles.clinchDeal}>0.00</div>
+          </div>
           <div className={styles.moneyList}>
             <div>
               <div>成交笔数（笔）</div>
-              <p>0</p>
+              <div className={styles.moneyNumber}>0</div>
             </div>
             <div>
               <div>退款金额（元）</div>
-              <p>0.00</p>
+              <div className={styles.moneyNumber}>0.00</div>
             </div>
             <div>
               <div>退款笔数（笔）</div>
-              <p>0</p>
+              <div className={styles.moneyNumber}>0</div>
             </div>
           </div>
         </div>

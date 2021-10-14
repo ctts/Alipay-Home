@@ -10,6 +10,12 @@
   box-shadow: 0 2px 15px 0 rgb(36, 89, 255, 44%);
   padding: 34px 25px;
 
+  .boardHeader {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -20,20 +26,31 @@
       .moneyList {
         display: flex;
         width: 300px;
+
+        .moneyNumber {
+          color: #fff;
+          font-size: 16px;
+        }
       }
 
-      .clinchDeal {
-        height: 90px;
-        color: #fff;
-        font-size: 60px;
-        font-family: 'AlipayNumber', sans-serif;
-        line-height: 1;
-      }
+      .clinchWrapper {
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.16);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
 
-      .clinchTitle {
-        margin: 0 0 5px;
-        color: #fff;
-        opacity: 0.8;
+        .clinchDeal {
+          color: #fff;
+          font-size: 60px;
+          font-family: 'AlipayNumber', sans-serif;
+          line-height: 1;
+        }
+
+        .clinchTitle {
+          margin: 0 0 5px;
+          color: #fff;
+          opacity: 0.8;
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -47,6 +64,7 @@
     background-size: 70%;
     border-radius: 10px;
     content: '';
+    user-select: none;
   }
 
   &::before {
