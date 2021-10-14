@@ -43,7 +43,7 @@ table {
 
 @font-face {
   font-family: Alibaba;
-  src: url(/assets/Alibaba-PuHuiTi-Light.ttf);
+  src: url('/assets/Alibaba-PuHuiTi-Light.ttf');
 }
 
 body {
