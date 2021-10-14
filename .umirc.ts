@@ -3,7 +3,6 @@ import { defineConfig } from 'umi';
 export default defineConfig({
   base: '/Alipay-Home/',
   publicPath: '/Alipay-Home/',
-  plugins: ['umi-plugin-gh-pages'],
   nodeModulesTransform: {
     type: 'none',
   },
