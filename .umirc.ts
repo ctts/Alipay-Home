@@ -1,7 +1,9 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/docs/' : './',
+  base: '/Alipay-Home/',
+  publicPath: '/Alipay-Home/',
+  plugins: ['umi-plugin-gh-pages'],
   nodeModulesTransform: {
     type: 'none',
   },
