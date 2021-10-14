@@ -3,7 +3,7 @@ import ReactECharts from 'echarts-for-react';
 import { style } from './index.less';
 const grayColor = `#666666`;
 const lineColor = `#5de0c9`;
-const Page: React.FC = () => {
+export default function Echarts(props: any) {
   const DEFAULT_OPTION = {
     tooltip: {
       trigger: 'axis',
@@ -66,6 +66,5 @@ const Page: React.FC = () => {
   useEffect(() => {
     setOption(option);
   });
-  return <ReactECharts option={option} style={{ width: 588, height: 200 }} />;
-};
-export default Page;
+  return <ReactECharts option={option} {...props} />;
+}

@@ -5,7 +5,7 @@ import { Select, Divider, List, Carousel, Button } from 'antd';
 import url from '*.svg';
 const { Option } = Select;
 
-export default function IndexPage() {
+export default function Usual() {
   const announcement = [
     {
       content: '支付宝关于进一步降低小微商户支付手续费的实施细则',
@@ -106,8 +106,8 @@ export default function IndexPage() {
         </List>
         <div className={styles.carouselWrapper}>
           <Carousel autoplay>
-            {carouselData.map((data) => (
-              <>
+            {carouselData.map((data, index) => (
+              <div key={index}>
                 <div
                   style={{
                     backgroundImage: `url(${data.url})`,
@@ -121,7 +121,7 @@ export default function IndexPage() {
                   ></p>
                   <Button shape="round">{data.button}</Button>
                 </div>
-              </>
+              </div>
             ))}
           </Carousel>
         </div>

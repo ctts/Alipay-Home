@@ -4,6 +4,13 @@ import { useState } from 'react';
 import { isFunction } from '@/common/utils';
 
 export default function InvertColorsCard(props: any) {
+  const {
+    leftOriginContent,
+    leftCoverContent,
+    rightOriginContent,
+    rightCoverContent,
+    ...restProps
+  } = props;
   const [hover, setHover] = useState(false);
   function handleMouseEnter() {
     setHover(true);
@@ -18,14 +25,14 @@ export default function InvertColorsCard(props: any) {
       <div>
         <div className={styles.contentWrapper}>
           <div className={styles.leftContent}>
-            {isFunction(props.leftOriginContent)
-              ? props.leftOriginContent()
-              : props.leftOriginContent}
+            {isFunction(leftOriginContent)
+              ? leftOriginContent()
+              : leftOriginContent}
           </div>
           <div>
-            {isFunction(props.rightOriginContent)
-              ? props.rightOriginContent()
-              : props.rightOriginContent}
+            {isFunction(rightOriginContent)
+              ? rightOriginContent()
+              : rightOriginContent}
           </div>
         </div>
       </div>
@@ -42,21 +49,19 @@ export default function InvertColorsCard(props: any) {
       <h4 className={styles.white}>{props.title}</h4>
       <div className={styles.contentWrapper}>
         <div className={styles.leftContent}>
-          {isFunction(props.leftCoverContent)
-            ? props.leftCoverContent()
-            : props.leftCoverContent}
+          {isFunction(leftCoverContent) ? leftCoverContent() : leftCoverContent}
         </div>
         <div>
-          {isFunction(props.rightCoverContent)
-            ? props.rightCoverContent()
-            : props.rightCoverContent}
+          {isFunction(rightCoverContent)
+            ? rightCoverContent()
+            : rightCoverContent}
         </div>
       </div>
     </Card>
   );
 
   return (
-    <div {...props} className={styles.container}>
+    <div {...restProps} className={styles.container}>
       {card}
       {shadowCard}
     </div>

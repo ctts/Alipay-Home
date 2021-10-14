@@ -4,6 +4,7 @@ import styles from './index.less';
 export default function solution() {
   const arr = [
     {
+      id: 1,
       background:
         'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*KWwrSbrCJKIAAAAAAAAAAAAAARQnAQ',
       title: '数字商超',
@@ -11,6 +12,7 @@ export default function solution() {
       color: '#333',
     },
     {
+      id: 2,
       background:
         'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*hQUxQKMeOrYAAAAAAAAAAAAAARQnAQ',
       title: '连锁便利',
@@ -18,6 +20,7 @@ export default function solution() {
       color: '#fff',
     },
     {
+      id: 3,
       background:
         'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*ZukiQr3CIY4AAAAAAAAAAAAAARQnAQ',
       title: '数字餐厅',
@@ -30,7 +33,7 @@ export default function solution() {
       <h3>行业解决方案</h3>
       <div className={styles.imageBoxWrapper}>
         {arr.map((obj) => (
-          <ImageBox {...obj} />
+          <ImageBox key={obj.id} {...obj} />
         ))}
       </div>
     </>

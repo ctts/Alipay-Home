@@ -8,7 +8,7 @@ import Solution from './components/Solution';
 import Recommend from './components/Recommend';
 import Usual from './components/Usual';
 
-export default function IndexPage() {
+export default function Home() {
   return (
     <div className={styles.container}>
       <div>

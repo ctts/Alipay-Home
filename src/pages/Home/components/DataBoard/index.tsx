@@ -1,21 +1,34 @@
-import style from './index.less';
+import styles from './index.less';
 import ECharts from '@/common/components/ECharts';
-import { Tabs } from 'antd';
-const { TabPane } = Tabs;
-export default function Navbar() {
+import Switch from './components/Switch';
+import { Divider } from 'antd';
+
+export default function dataBoard() {
   return (
-    <div className={style.dataBoard}>
-      {/* <div>
-        <Tabs defaultActiveKey="1">
-          <TabPane tab="Tab 1" key="1" style={{ height: 200 }}>
-            Content of Tab Pane 1
-          </TabPane>
-          <TabPane tab="Tab 2" key="2">
-            Content of Tab Pane 2
-          </TabPane>
-        </Tabs>
-      </div> */}
-      <ECharts />
+    <div className={styles.dataBoard}>
+      <Switch />
+      <div className={styles.content}>
+        <div className={styles.leftPanel}>
+          <div className={styles.chinchTitle}>成交金额（元）</div>
+          <div className={styles.clinchDeal}>0.00</div>
+          <Divider />
+          <div className={styles.moneyList}>
+            <div>
+              <div>成交笔数（笔）</div>
+              <p>0</p>
+            </div>
+            <div>
+              <div>退款金额（元）</div>
+              <p>0.00</p>
+            </div>
+            <div>
+              <div>退款笔数（笔）</div>
+              <p>0</p>
+            </div>
+          </div>
+        </div>
+        <ECharts style={{ width: '515px', height: '200px' }} />
+      </div>
     </div>
   );
 }
