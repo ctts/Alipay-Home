@@ -1,6 +1,8 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
+  base: '/Alipay-Home/',
+  publicPath: '/Alipay-Home/',
   nodeModulesTransform: {
     type: 'none',
   },
