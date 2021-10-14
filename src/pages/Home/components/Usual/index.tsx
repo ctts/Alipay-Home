@@ -71,17 +71,34 @@ export default function Usual() {
     },
   ];
 
+  const options = [
+    {
+      value: '资金总览',
+    },
+    {
+      value: '批量付款',
+    },
+    {
+      value: '自动调拨',
+    },
+    {
+      value: '充值',
+    },
+    {
+      value: '转账',
+    },
+  ];
+
   return (
     <div className={styles.usualContainer}>
       <Card>
         <CardHeader left="常用功能" right="管理" />
         <Select className={styles.select} placeholder="请输入功能名称查找">
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="disabled" disabled>
-            Disabled
-          </Option>
-          <Option value="Yiminghe">yiminghe</Option>
+          {options.map((option) => (
+            <Option key={option.value} value={option.value}>
+              {option.value}
+            </Option>
+          ))}
         </Select>
         <Divider dashed />
         <CardHeader left="平台公告" right="更多公告" />
