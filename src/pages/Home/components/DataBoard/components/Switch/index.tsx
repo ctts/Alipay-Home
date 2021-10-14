@@ -4,7 +4,6 @@ import styles from './index.less';
 export default function Switch() {
   const [active, setActive] = useState(0);
   function handleChange(state: number) {
-    console.log(state);
     setActive(state);
   }
   return (

@@ -4,22 +4,28 @@ import * as echarts from 'echarts';
 
 export default function Echarts(props: any) {
   const lineConfig = {
-    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-      {
-        offset: 0,
-        color: '#5dcbae',
-      },
-      {
-        offset: 0.5,
-        color: '#81ddca',
-      },
-      {
-        offset: 1,
-        color: '#fff',
-      },
-    ]),
-    width: 6,
-    type: 'solid',
+    showSymbol: false,
+    type: 'line',
+    smooth: true,
+    color: '#81ddca',
+    symbolSize: 20,
+    lineStyle: {
+      color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+        {
+          offset: 0,
+          color: '#5dcbae',
+        },
+        {
+          offset: 0.5,
+          color: '#81ddca',
+        },
+        {
+          offset: 1,
+          color: '#fff',
+        },
+      ]),
+      width: 6,
+    },
   };
   const DEFAULT_OPTION = {
     axisPointer: {},
@@ -94,27 +100,18 @@ export default function Echarts(props: any) {
     series: [
       {
         data: [123, 232, 401, 934, 673, 243, 111],
-        type: 'line',
-        symbol: 'none',
-        smooth: true,
         name: '成交金额',
-        lineStyle: lineConfig,
+        ...lineConfig,
       },
       {
         data: [820, 562, 601, 854, 129, 43, 323],
-        type: 'line',
-        symbol: 'none',
-        smooth: true,
         name: '成交笔数',
-        lineStyle: lineConfig,
+        ...lineConfig,
       },
       {
         data: [234, 932, 323, 754, 190, 345, 530],
-        type: 'line',
-        symbol: 'none',
-        smooth: true,
         name: '退款金额',
-        lineStyle: lineConfig,
+        ...lineConfig,
       },
     ],
   };

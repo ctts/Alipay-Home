@@ -1,7 +1,6 @@
 import styles from './index.less';
 import ECharts from '@/common/components/ECharts';
 import Switch from './components/Switch';
-import { Divider } from 'antd';
 
 export default function dataBoard() {
   return (

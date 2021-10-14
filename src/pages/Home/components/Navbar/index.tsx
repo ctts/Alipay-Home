@@ -48,7 +48,7 @@ export default function Navbar() {
               className={styles.avatar}
             ></img>
             <div className={styles.user}>
-              <div>陶家行</div>
+              <div className={styles.name}>陶家行</div>
               <div className={styles.account}>178******23 [主账号]</div>
             </div>
           </div>

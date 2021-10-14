@@ -7,10 +7,12 @@ import Financial from './components/Financial';
 import Solution from './components/Solution';
 import Recommend from './components/Recommend';
 import Usual from './components/Usual';
+import Questions from './components/Questions';
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Questions />
       <div>
         <Navbar />
         <div className={styles.main}>
