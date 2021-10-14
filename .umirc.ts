@@ -1,7 +1,7 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  // base: '/docs/',
+  base: process.env.NODE_ENV === 'production' ? '/docs/' : './',
   nodeModulesTransform: {
     type: 'none',
   },
