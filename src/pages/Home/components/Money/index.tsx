@@ -56,7 +56,7 @@ export default function Money() {
             <Button className={styles.mr6}>充值</Button>
             <Button className={styles.mr6}>转账</Button>
             <Button className={styles.mr6}>提现</Button>
-            <Button className={styles.mr6}>批量付款</Button>
+            <Button>批量付款</Button>
           </div>
         </div>
       </div>
