@@ -19,7 +19,7 @@ export default function Money() {
       <Popover
         placement="top"
         content="不可用余额是指用户本人账户中暂时不能使用的那部分资金"
-        trigger="click"
+        trigger="hover"
       >
         <QuestionCircleOutlined className={styles.moneyTitle} />
       </Popover>
@@ -42,11 +42,12 @@ export default function Money() {
         <div className={styles.divider}></div>
         <div>
           <Row gutter={16}>
-            <Col span={12}>
+            <Col span={8}>
               <div className={styles.moneyTitle}>账户可用余额（元）</div>
               {showDetail ? <Statistic value={112893} /> : HideItem}
             </Col>
-            <Col span={12}>
+            <Col span={7}></Col>
+            <Col span={8}>
               {question}
               {showDetail ? <Statistic value={112893} /> : HideItem}
             </Col>

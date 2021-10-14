@@ -8,7 +8,7 @@ export default function dataBoard() {
     <div className={styles.dataBoard}>
       <div className={styles.boardHeader}>
         <Switch />
-        更多交易
+        <div className={styles.more}>更多交易</div>
       </div>
       <div className={styles.content}>
         <div className={styles.leftPanel}>
@@ -31,7 +31,7 @@ export default function dataBoard() {
             </div>
           </div>
         </div>
-        <ECharts style={{ width: '515px', height: '200px' }} />
+        <ECharts style={{ width: '515px', height: '200px', zIndex: '100' }} />
       </div>
     </div>
   );

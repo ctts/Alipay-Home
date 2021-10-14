@@ -40,12 +40,13 @@ table {
   border-spacing: 0;
 } */
 
+
 @font-face {
   font-family: Alibaba;
   src: url(/assets/Alibaba-PuHuiTi-Light.ttf);
 }
 
-body{
+body {
   font-family: Alibaba;
 }
 
@@ -55,4 +56,17 @@ li {
 
 ul {
   padding: 0;
+}
+
+
+h4,
+h5,
+h6,
+strong {
+  font-weight: normal;
+}
+
+h3{
+  font-weight: 700;
+  font-size: 18px;
 }
