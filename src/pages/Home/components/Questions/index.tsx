@@ -33,6 +33,9 @@ export default function Questions() {
 
   return (
     <div className={styles.questionContainer}>
+      <span title="关闭" className={styles.close}>
+        ×
+      </span>
       <img
         className={styles.logo}
         src="https://gw.alipayobjects.com/mdn/pa_custser/afts/img/A*Dz0bSIh3_UvP-aBHs6jUCQBjARQnAQ"
