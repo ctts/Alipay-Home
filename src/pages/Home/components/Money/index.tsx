@@ -24,7 +24,11 @@ export default function Money() {
       <div className={styles.moneyTitle}>不可用余额（元）</div>
       <Popover
         placement="top"
-        content="不可用余额是指用户本人账户中暂时不能使用的那部分资金"
+        content={
+          <div style={{ width: '250px' }}>
+            不可用余额是指用户本人账户中暂时不能使用的那部分资金
+          </div>
+        }
         trigger="hover"
       >
         <QuestionCircleOutlined className={styles.moneyTitle} />
