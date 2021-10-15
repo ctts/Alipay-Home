@@ -29,7 +29,6 @@ export default function Echarts(props: any) {
       },
     };
     return {
-      axisPointer: {},
       legend: {
         x: 'left',
         selectedMode: 'single', // 设置单选多选模式
@@ -54,6 +53,9 @@ export default function Echarts(props: any) {
         padding: 15,
         textStyle: {
           color: 'rgb(261,261,261)',
+        },
+        axisPointer: {
+          type: 'none',
         },
         formatter: (params: Array<any>, ticket: string, callback: Function) => {
           const target = params[0];
