@@ -1,11 +1,17 @@
 import styles from './index.less';
 import { Row, Col, Statistic, Popover, Button, Carousel } from 'antd';
 import { useState } from 'react';
+import { UserMoney } from './ts-config';
 import {
   EyeOutlined,
   EyeInvisibleOutlined,
   QuestionCircleOutlined,
 } from '@ant-design/icons';
+
+const userMoney: UserMoney = {
+  useable: '112,893',
+  doNotUse: '110,000',
+};
 
 export default function Money() {
   let [showDetail, setShowDetail] = useState(false);
@@ -43,12 +49,12 @@ export default function Money() {
         <Row gutter={16}>
           <Col span={8}>
             <div className={styles.moneyTitle}>账户可用余额（元）</div>
-            {showDetail ? <Statistic value={112893} /> : HideItem}
+            {showDetail ? <Statistic value={userMoney.useable} /> : HideItem}
           </Col>
           <Col span={7}></Col>
           <Col span={8}>
             {question}
-            {showDetail ? <Statistic value={112893} /> : HideItem}
+            {showDetail ? <Statistic value={userMoney.doNotUse} /> : HideItem}
           </Col>
         </Row>
         <div className={styles.mt38}>

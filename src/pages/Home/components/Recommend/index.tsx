@@ -2,9 +2,10 @@ import style from './index.less';
 import Card from '@/common/components/Card';
 import CardHeader from '@/common/components/CardHeader';
 import RecommendItem from './components/RecommendItem';
+import { RecommendDataItem } from './ts-config';
 
 export default function Recommend() {
-  const data = [
+  const data: RecommendDataItem[] = [
     {
       id: 1,
       url: 'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*zafYSrNyju4AAAAAAAAAAAAAARQnAQ',
@@ -41,7 +42,7 @@ export default function Recommend() {
     <div>
       <CardHeader left="为您推荐" right="查看更多" />
       <Card className={style.container}>
-        {data.map((props) => (
+        {data.map((props: RecommendDataItem) => (
           <RecommendItem key={props.id} {...props} />
         ))}
       </Card>

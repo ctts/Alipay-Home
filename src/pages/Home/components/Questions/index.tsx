@@ -12,11 +12,7 @@ export default function Questions() {
       document.documentElement.scrollTop ||
       0;
 
-    if (scrollTop > 0) {
-      setOnTop(true);
-    } else {
-      setOnTop(false);
-    }
+    scrollTop > 0 ? setOnTop(true) : setOnTop(false);
   };
 
   useEffect(() => {

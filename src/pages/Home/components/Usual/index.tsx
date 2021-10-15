@@ -2,11 +2,11 @@ import styles from './index.less';
 import CardHeader from '@/common/components/CardHeader';
 import Card from '@/common/components/Card';
 import { Select, Divider, List, Carousel, Button } from 'antd';
-import url from '*.svg';
+import { CarouseItem, NoticeItem } from './ts-config';
 const { Option } = Select;
 
 export default function Usual() {
-  const announcement = [
+  const announcement: NoticeItem[] = [
     {
       content: '支付宝关于进一步降低小微商户支付手续费的实施细则',
       time: '08.01',
@@ -28,7 +28,7 @@ export default function Usual() {
       time: '01.19',
     },
   ];
-  const todo = [
+  const todo: NoticeItem[] = [
     {
       content: '中国工商银行|尾号2116|金额：24.00元',
       time: '10.06',
@@ -50,7 +50,7 @@ export default function Usual() {
       time: '07.09',
     },
   ];
-  const carouselData = [
+  const carouselData: CarouseItem[] = [
     {
       url: 'https://gw.alipayobjects.com/mdn/rms_50301b/afts/img/A*oqM0SZkIPQkAAAAAAAAAAAAAARQnAQ',
       title: '超级五六七',
@@ -103,7 +103,7 @@ export default function Usual() {
         <Divider dashed />
         <CardHeader left="平台公告" right="更多公告" />
         <List className={styles.usualList} split={false}>
-          {todo.map((val, index) => (
+          {todo.map((val: NoticeItem, index) => (
             <List.Item key={index}>
               <div className={styles.usualItem}>{val.content}</div>
               <div>{val.time}</div>
@@ -114,7 +114,7 @@ export default function Usual() {
           <CardHeader left="待办通知" right="更多待办" />
         </div>
         <List className={styles.usualList} split={false}>
-          {announcement.map((val, index) => (
+          {announcement.map((val: NoticeItem, index) => (
             <List.Item key={index}>
               <div className={styles.usualItem}>{val.content}</div>
               <div>{val.time}</div>
@@ -123,7 +123,7 @@ export default function Usual() {
         </List>
         <div className={styles.carouselWrapper}>
           <Carousel autoplay>
-            {carouselData.map((data, index) => (
+            {carouselData.map((data: CarouseItem, index) => (
               <div key={index}>
                 <div
                   style={{

@@ -4,7 +4,7 @@ import * as echarts from 'echarts';
 
 export default function Echarts(props: any) {
   function getConfig(data: any) {
-    const lineConfig = {
+    const lineConfig: echarts.LineSeriesOption = {
       showSymbol: false,
       type: 'line',
       smooth: true,

@@ -1,6 +1,7 @@
+import { SolutionItem } from '../../ts-config';
 import styles from './index.less';
 
-export default function ImageBox(props: any) {
+export default function ImageBox(props: SolutionItem) {
   return (
     <div
       className={styles.boxContainer}

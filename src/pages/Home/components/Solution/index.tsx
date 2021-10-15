@@ -1,8 +1,9 @@
 import ImageBox from './components/ImageBox';
 import styles from './index.less';
+import { SolutionItem } from './ts-config';
 
 export default function solution() {
-  const arr = [
+  const arr: SolutionItem[] = [
     {
       id: 1,
       background:
@@ -32,7 +33,7 @@ export default function solution() {
     <>
       <h3>行业解决方案</h3>
       <div className={styles.imageBoxWrapper}>
-        {arr.map((obj) => (
+        {arr.map((obj: SolutionItem) => (
           <ImageBox key={obj.id} {...obj} />
         ))}
       </div>
